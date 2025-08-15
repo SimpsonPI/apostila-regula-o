@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CPNU 2025 - YR Aprova | Regulação e Agências Reguladoras</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Cabeçalho Fixo */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #ff6600;
+      color: white;
+      padding: 16px 20px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .header h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .header .logo {
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .header p {
+      font-size: 0.85rem;
+      margin: 4px 0 0;
+      opacity: 0.95;
+    }
+
+    /* Conteúdo com margem para cabeçalho fixo */
+    .content {
+      margin-top: 130px;
+      padding-bottom: 60px;
+    }
+
+    /* Títulos */
+    h2 {
+      font-size: 1.4rem;
+      color: #1e3a8a;
+      margin: 60px 0 20px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #3b82f6;
+      page-break-before: always;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #1e40af;
+      margin: 30px 0 12px 0;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      color: #1e293b;
+      margin: 20px 0 10px 0;
+      font-weight: 600;
+    }
+
+    /* Texto comum */
+    p {
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+
+    /* Sumário */
+    .toc {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .toc h2 {
+      margin: 0 0 16px 0;
+      border: none;
+      font-size: 1.3rem;
+      color: #1e3a8a;
+    }
+
+    .toc ul {
+      list-style: none;
+      font-size: 0.96rem;
+    }
+
+    .toc li {
+      margin-bottom: 8px;
+    }
+
+    .toc a {
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+      color: #0284c7;
+    }
+
+    .toc ul ul {
+      margin-left: 20px;
+      margin-top: 6px;
+    }
+
+    .toc .section {
+      font-weight: 600;
+      color: #1e3a8a;
+      margin: 10px 0 6px 0;
+    }
+
+    /* Introdução */
+    .introduction {
+      background: #dbeafe;
+      border-left: 4px solid #3b82f6;
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 30px;
+      font-size: 0.98rem;
+      color: #1e3a8a;
+    }
+
+    /* Destaque */
+    .highlight {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 14px 18px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.96rem;
+      color: #92400e;
+    }
+
+    /* Tabelas */
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      background: #ffffff;
+    }
+
+    th {
+      background-color: #3b82f6;
+      color: #ffffff;
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #d1d5db;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f5f9;
+    }
+
+    /* Listas */
+    ul, ol {
+      margin: 12px 0 12px 24px;
+      font-size: 0.98rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* Questões */
+    .question {
+      margin: 30px 0;
+      padding: 16px;
+      background: #ffffff;
+      border: 1px solid #e0e7ff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .question h4 {
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .options {
+      list-style: none;
+      margin: 10px 0 10px 0;
+    }
+
+    .options li {
+      margin-bottom: 8px;
+      padding-left: 24px;
+      position: relative;
+      font-size: 0.96rem;
+    }
+
+    .options li::before {
+      content: attr(data-letter ")";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 600;
+      color: #f59e0b;
+    }
+
+    .answer {
+      margin-top: 10px;
+      font-weight: 600;
+      color: #10b981;
+      font-size: 0.96rem;
+    }
+
+    /* Infográficos */
+    .infographic {
+      background: #f1f5f9;
+      border: 1px dashed #64748b;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 8px;
+      text-align: center;
+      font-style: italic;
+      color: #475569;
+    }
+
+    /* Simulado Link */
+    .simulado-box {
+      background: #ecfdf5;
+      border: 1px solid #059669;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .simulado-box h4 {
+      color: #059669;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .simulado-box a {
+      color: #059669;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .simulado-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Rodapé */
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #94a3b8;
+      font-size: 0.85rem;
+      page-break-before: avoid;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+        font-size: 0.95rem;
+      }
+      h2 { font-size: 1.3rem; }
+      h3 { font-size: 1.1rem; }
+      .introduction, .highlight {
+        font-size: 0.92rem;
+      }
+      .toc {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center; margin-top: 100px;">
+  <img src="capa2 - Apostila.png" alt="Capa Apostila Bloco 09" style="max-width:100%; height:auto;">
+</div>
+  <!-- Cabeçalho Fixo -->
+  <div class="header">
+    <h1>CPNU 2025 - <span class="logo">YR Aprova</span></h1>
+    <p>Regulação e Agências Reguladoras – Nível Médio / Banca FGV</p>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="content">
+
+    <!-- Sumário Interativo -->
+    <div class="toc">
+      <h2>📋 Sumário Interativo</h2>
+      <ul>
+        <li class="section">1. O Papel Regulador do Estado</li>
+        <ul>
+          <li><a href="#papel-estado">1.1. Pressupostos e Objetivos</a></li>
+          <li><a href="#conceitos-basicos">1.2. Regulação Econômica e Social</a></li>
+          <li><a href="#falhas-mercado">1.3. Falhas de Mercado e de Governo</a></li>
+          <li><a href="#questao1">Questão 1 – Regulação</a></li>
+        </ul>
+
+        <li class="section">2. Agências Reguladoras</li>
+        <ul>
+          <li><a href="#historico">2.1. Histórico e Conceito</a></li>
+          <li><a href="#estrutura">2.2. Estrutura Jurídica e Funções</a></li>
+          <li><a href="#autonomia">2.3. Autonomia e Poder Normativo</a></li>
+        </ul>
+
+        <li class="section">3. Reforma do Estado e Agências</li>
+        <ul>
+          <li><a href="#reforma">3.1. Contexto e Evolução</a></li>
+        </ul>
+
+        <li class="section">4. Boas Práticas Regulatórias</li>
+        <ul>
+          <li><a href="#air">4.1. Análise de Impacto Regulatório (AIR)</a></li>
+          <li><a href="#arr">4.2. Avaliação de Resultado Regulatório (ARR)</a></li>
+          <li><a href="#agenda">4.3. Agenda Regulatória e Participação Social</a></li>
+          <li><a href="#questao2">Questão 2 – AIR</a></li>
+        </ul>
+
+        <li class="section">5. Boas Práticas de Fiscalização</li>
+        <ul>
+          <li><a href="#fiscalizacao">5.1. Princípios e Estratégias</a></li>
+        </ul>
+
+        <li class="section">6. Gerenciamento e Qualidade</li>
+        <ul>
+          <li><a href="#qualidade">6.1. Controle e Auditoria</a></li>
+        </ul>
+
+        <li class="section">7. Análise de Risco</li>
+        <ul>
+          <li><a href="#risco">7.1. Conceitos e Gestão</a></li>
+        </ul>
+
+        <li class="section">8. Fiscalização Responsiva</li>
+        <ul>
+          <li><a href="#responsiva">8.1. Proporcionalidade e Incentivos</a></li>
+        </ul>
+
+        <li class="section">9. Processo Administrativo Sancionador</li>
+        <ul>
+          <li><a href="#sancao">9.1. Etapas e Garantias</a></li>
+          <li><a href="#questao3">Questão 3 – Processo Sancionador</a></li>
+        </ul>
+
+        <li class="section">✅ Simulado Final</li>
+        <ul>
+          <li><a href="#simulado">Questões 1 a 3 – Revisão Geral</a></li>
+        </ul>
+      </ul>
+    </div>
+
+    <!-- Introdução -->
+    <div class="introduction">
+      Bem-vindo(a) ao módulo <strong>Regulação e Agências Reguladoras</strong> da apostila CPNU 2025! Este conteúdo foi desenvolvido para oferecer uma preparação completa, clara e objetiva para concursos da banca FGV. Aqui, você encontrará explicações detalhadas sobre o papel do Estado na regulação, as funções das agências reguladoras, boas práticas regulatórias e processos de fiscalização. Com base na reforma do Estado e em normas como a Lei 9.784/1999, este material prepara você para dominar um dos pilares do edital com segurança e precisão.
+    </div>
+
+    <!-- Capítulo 1 -->
+    <h2 id="papel-regulador">1. O Papel Regulador do Estado</h2>
+    <p>O Estado atua como regulador para corrigir falhas de mercado e garantir o interesse público em setores essenciais como energia, telecomunicações, saúde e transporte.</p>
+
+    <h3 id="papel-estado">1.1. Pressupostos, Objetivos e Instrumentos</h3>
+    <p><strong>Pressupostos:</strong> Existência de falhas de mercado que o mecanismo de oferta e demanda não resolve sozinho.</p>
+    <p><strong>Objetivos:</strong> Promover eficiência econômica, proteger consumidores, garantir qualidade dos serviços e estimular a concorrência.</p>
+    <p><strong>Instrumentos:</strong> Licenças, tarifas, normas técnicas, fiscalização e sanções.</p>
+
+    <h3 id="conceitos-basicos">1.2. Conceitos Básicos</h3>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Conceito</th>
+            <th>Definição</th>
+            <th>Exemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Externalidades</td>
+            <td>Efeitos colaterais de uma atividade sobre terceiros</td>
+            <td>Poluição de uma indústria</td>
+          </tr>
+          <tr>
+            <td>Bens Públicos</td>
+            <td>Não rivais e não exclusivos</td>
+            <td>Iluminação pública</td>
+          </tr>
+          <tr>
+            <td>Assimetria de Informação</td>
+            <td>Uma parte sabe mais que a outra</td>
+            <td>Seguro de saúde</td>
+          </tr>
+          <tr>
+            <td>Falhas de Mercado</td>
+            <td>Quando o mercado não aloca recursos eficientemente</td>
+            <td>Monopólios naturais</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="falhas-mercado">1.3. Regulação, Autorregulação, Desregulação</h3>
+    <ul>
+      <li><strong>Regulação:</strong> Intervenção estatal direta.</li>
+      <li><strong>Autorregulação:</strong> Setor define suas próprias regras (com supervisão).</li>
+      <li><strong>Desregulação:</strong> Redução da intervenção estatal.</li>
+    </ul>
+
+    <div class="question" id="questao1">
+      <h4>Questão 1 (FGV - Adaptada)</h4>
+      <p>Qual fenômeno ocorre quando uma empresa detém o controle total de um mercado, impedindo a entrada de concorrentes?</p>
+      <ul class="options">
+        <li data-letter="a">Externalidade positiva</li>
+        <li data-letter="b">Bem público</li>
+        <li data-letter="c">Barreira de entrada</li>
+        <li data-letter="d">Assimetria de informação</li>
+        <li data-letter="e">Concorrência perfeita</li>
+      </ul>
+      <p class="answer">Gabarito: C</p>
+    </div>
+
+    <!-- Capítulo 2 -->
+    <h2 id="agencias-reguladoras">2. Agências Reguladoras</h2>
+    <p>As agências reguladoras são entidades da administração indireta criadas para regular setores específicos com autonomia técnica, decisória e financeira.</p>
+
+    <h3 id="historico">2.1. Histórico e Conceito</h3>
+    <p>Criadas na década de 1990 com a privatização de setores estratégicos (telecomunicações, energia, petróleo). Ex: ANEEL, ANVISA, ANS, ANATEL.</p>
+
+    <h3 id="estrutura">2.2. Estrutura Jurídica e Funções</h3>
+    <ul>
+      <li><strong>Presidência e Diretoria Colegiada</strong></li>
+      <li><strong>Funções:</strong> Normatização, fiscalização, aplicação de sanções, resolução de conflitos.</li>
+    </ul>
+
+    <h3 id="autonomia">2.3. Autonomia e Poder Normativo</h3>
+    <p>As agências possuem <strong>autonomia administrativa</strong> e <strong>poder normativo</strong> para editar resoluções e portarias, desde que não invadam o campo da lei.</p>
+
+    <!-- Capítulo 3 -->
+    <h2 id="reforma-estado">3. Reforma do Estado e o Papel das Agências</h2>
+    <p>A reforma do Estado, iniciada na década de 1990, buscou modernizar a administração pública, transferindo funções regulatórias para agências especializadas, visando maior eficiência e despolitização.</p>
+
+    <!-- Capítulo 4 -->
+    <h2 id="boas-praticas-regulatorias">4. Boas Práticas Regulatórias</h2>
+
+    <h3 id="air">4.1. Análise de Impacto Regulatório (AIR)</h3>
+    <p>Estudo obrigatório para avaliar os impactos econômicos, sociais e ambientais de uma nova norma. Baseia-se em evidências e transparência.</p>
+
+    <h3 id="arr">4.2. Avaliação de Resultado Regulatório (ARR)</h3>
+    <p>Verifica se a norma atingiu seus objetivos após sua implementação.</p>
+
+    <h3 id="agenda">4.3. Agenda Regulatória</h3>
+    <p>Planejamento anual das ações normativas, com amplo debate e participação social (audiências públicas, consulta).</p>
+
+    <div class="question" id="questao2">
+      <h4>Questão 2 (FGV)</h4>
+      <p>Qual é o objetivo principal da Análise de Impacto Regulatório (AIR)?</p>
+      <ul class="options">
+        <li data-letter="a">Aumentar a burocracia</li>
+        <li data-letter="b">Justificar a criação de novas taxas</li>
+        <li data-letter="c">Avaliar os impactos de uma nova norma</li>
+        <li data-letter="d">Reduzir a participação social</li>
+        <li data-letter="e">Acelerar o processo legislativo</li>
+      </ul>
+      <p class="answer">Gabarito: C</p>
+    </div>
+
+    <!-- Capítulo 5 -->
+    <h2 id="boas-praticas-fiscalizacao">5. Boas Práticas de Fiscalização</h2>
+    <p>Baseiam-se em princípios como proporcionalidade, legalidade, eficiência e transparência. Devem ser planejadas, focadas em risco e com uso de tecnologia.</p>
+
+    <!-- Capítulo 6 -->
+    <h2 id="gerenciamento-qualidade">6. Gerenciamento, Controle e Garantia da Qualidade</h2>
+    <p>Inclui sistemas de gestão da qualidade (ex: ISO 9001), auditorias internas e externas, e indicadores de desempenho.</p>
+
+    <!-- Capítulo 7 -->
+    <h2 id="analise-risco">7. Análise e Gerenciamento de Risco</h2>
+    <p>Processo de identificar, avaliar e mitigar riscos. É fundamental para priorizar ações de fiscalização e alocação de recursos.</p>
+
+    <!-- Capítulo 8 -->
+    <h2 id="fiscalizacao-responsiva">8. Fiscalização Responsiva</h2>
+    <p>Abordagem que ajusta o nível de fiscalização ao comportamento do regulado. Empresas cooperativas recebem menos fiscalização; as desobedientes, mais.</p>
+
+    <!-- Capítulo 9 -->
+    <h2 id="processo-sancionador">9. Processo Administrativo Sancionador</h2>
+    <p>É o procedimento formal para apurar infrações e aplicar penalidades. Deve garantir:</p>
+    <ul>
+      <li>Contraditório</li>
+      <li>Ampla defesa</li>
+      <li>Motivação das decisões</li>
+      <li>Proporcionalidade das sanções</li>
+    </ul>
+
+    <div class="question" id="questao3">
+      <h4>Questão 3 (FGV)</h4>
+      <p>Qual princípio garante ao investigado o direito de apresentar provas e argumentos em sua defesa?</p>
+      <ul class="options">
+        <li data-letter="a">Legalidade</li>
+        <li data-letter="b">Impessoalidade</li>
+        <li data-letter="c">Ampla defesa</li>
+        <li data-letter="d">Eficiência</li>
+        <li data-letter="e">Publicidade</li>
+      </ul>
+      <p class="answer">Gabarito: C</p>
+    </div>
+
+    <!-- Simulado Final -->
+    <h2 id="simulado">✅ Simulado Final – Revisão Geral</h2>
+    <p>Questões no estilo FGV para revisão de todo o conteúdo.</p>
+
+    <div class="question">
+      <h4>1. Qual agência regula o setor de energia elétrica no Brasil?</h4>
+      <ul class="options">
+        <li data-letter="a">ANVISA</li>
+        <li data-letter="b">ANS</li>
+        <li data-letter="c">ANEEL</li>
+        <li data-letter="d">ANATEL</li>
+        <li data-letter="e">ANTAQ</li>
+      </ul>
+      <p class="answer">Gabarito: C</p>
+    </div>
+
+    <div class="question">
+      <h4>2. O que é uma "externalidade negativa"?</h4>
+      <ul class="options">
+        <li data-letter="a">Um benefício não pago recebido por terceiros</li>
+        <li data-letter="b">Um custo imposto a terceiros sem compensação</li>
+        <li data-letter="c">Um bem de consumo coletivo</li>
+        <li data-letter="d">Uma informação privilegiada</li>
+        <li data-letter="e">Uma taxa de regulação</li>
+      </ul>
+      <p class="answer">Gabarito: B</p>
+    </div>
+
+    <div class="question">
+      <h4>3. Qual é o principal objetivo da Agenda Regulatória?</h4>
+      <ul class="options">
+        <li data-letter="a">Aumentar o número de normas</li>
+        <li data-letter="b">Reduzir a transparência</li>
+        <li data-letter="c">Planejar ações regulatórias com participação social</li>
+        <li data-letter="d">Agilizar a desregulação</li>
+        <li data-letter="e">Fortalecer o poder normativo</li>
+      </ul>
+      <p class="answer">Gabarito: C</p>
+    </div>
+
+    <!-- Link para Simulado -->
+<div class="simulado-box" style="border: 2px solid #ff6600; padding: 20px; border-radius: 8px; background: #fff8f2; margin: 30px 0;">
+  <h4 style="margin-top:0; font-size: 20px;">🚀 Acesse o Simulado Completo Online!</h4>
+  <p>Teste seus conhecimentos com o simulado oficial da <strong>YR Aprova</strong>, com 40 questões no estilo da banca FGV.</p>
+  <p>
+    <a href="https://encurtador.com.br/vnouQ" target="_blank" style="color:#fff; background:#ff6600; padding:10px 16px; text-decoration:none; border-radius:6px; font-weight:bold;">
+      Clique aqui para acessar o simulado →
+    </a>
+  </p>
+</div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+      Apostila CPNU 2025 – YR Aprova | Regulação e Agências Reguladoras – Nível Médio<br>
+      © 2025 YR Aprova. Todos os direitos reservados.<br>
+      Conteúdo atualizado para concursos da banca FGV.
+    </div>
+
+  </div>
+</body>
+</html>
